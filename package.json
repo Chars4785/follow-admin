@@ -5,16 +5,15 @@
   "author": "Lee Jong Min <9105lgm@naver.com>",
   "license": "MIT",
   "scripts": {
-    "start": "rollup -c -w --environment NODE_ENV:development",
+    "start": "webpack-dev-server --mode development --hot",
+    "start:roll": "rollup -c -w rollup.config.js",
     "build": "rollup -c --environment NODE_ENV:production",
     "build:dev": "rollup -c",
     "watch": "rollup -cw"
   },
-  "peerDependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
   "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "babel": "^6.23.0"
   },
   "devDependencies": {
@@ -29,13 +28,22 @@
     "@rollup/plugin-typescript": "^8.3.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-loader": "^8.2.5",
+    "html-webpack-plugin": "^5.5.0",
+    "rimraf": "^3.0.2",
     "rollup": "^2.76.0",
     "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-livereload": "^2.0.5",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.32.1",
+    "rollup-plugin-serve": "^2.0.0",
     "tslib": "^2.4.0",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3"
   }
 }
